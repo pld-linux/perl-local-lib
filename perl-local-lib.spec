@@ -8,13 +8,13 @@
 Summary:	local::lib - create and use a local lib/ for perl modules with PERL5LIB
 #Summary(pl.UTF-8):	
 Name:		perl-local-lib
-Version:	1.003001
+Version:	1.004007
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/A/AP/APEIRON/local-lib-1.003001.tar.gz
-# Source0-md5:	cc2e6547562c1538e37f52f324f0fd15
+Source0:	http://www.cpan.org/modules/by-authors/id/A/AP/APEIRON/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	255c880d47a547f4cf9af1906e510849
 URL:		http://search.cpan.org/dist/local-lib/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
