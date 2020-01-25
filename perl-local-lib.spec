@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	local
 %define	pnam	lib
 Summary:	local::lib - create and use a local lib/ for perl modules with PERL5LIB
