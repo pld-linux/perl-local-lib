@@ -8,7 +8,7 @@ Summary:	local::lib - create and use a local lib/ for perl modules with PERL5LIB
 #Summary(pl.UTF-8):	
 Name:		perl-local-lib
 Version:	2.000029
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -53,6 +53,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes
+%dir %{perl_vendorlib}/lib
+%dir %{perl_vendorlib}/POD2/DE
+%dir %{perl_vendorlib}/POD2/PT_BR
 %{perl_vendorlib}/local
 %{perl_vendorlib}/lib/core
 %{perl_vendorlib}/POD2/DE/local
