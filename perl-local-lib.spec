@@ -8,7 +8,7 @@ Summary:	local::lib - create and use a local lib/ for perl modules with PERL5LIB
 #Summary(pl.UTF-8):	
 Name:		perl-local-lib
 Version:	2.000029
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -47,6 +47,11 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} -r $RPM_BUILD_ROOT%{perl_vendorlib}/POD2
+install -d $RPM_BUILD_ROOT%{_mandir}/{de,pt_BR}/man3
+%{__mv} $RPM_BUILD_ROOT%{_mandir}/man3/POD2::DE::local::lib.3pm $RPM_BUILD_ROOT%{_mandir}/de/man3/local::lib.3pm
+%{__mv} $RPM_BUILD_ROOT%{_mandir}/man3/POD2::PT_BR::local::lib.3pm $RPM_BUILD_ROOT%{_mandir}/pt_BR/man3/local::lib.3pm
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -54,10 +59,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes
 %dir %{perl_vendorlib}/lib
-%dir %{perl_vendorlib}/POD2/DE
-%dir %{perl_vendorlib}/POD2/PT_BR
 %{perl_vendorlib}/local
 %{perl_vendorlib}/lib/core
-%{perl_vendorlib}/POD2/DE/local
-%{perl_vendorlib}/POD2/PT_BR/local
 %{_mandir}/man3/*
+%lang(de) %{_mandir}/de/man3/local::lib.3pm*
+%lang(pt_BR) %{_mandir}/pt_BR/man3/local::lib.3pm*
